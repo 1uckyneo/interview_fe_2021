@@ -10,20 +10,15 @@
       // 重复：重新设置 slow
       if (idxMap.has(s.charAt(fast)) && idxMap.get(s.charAt(fast)) > slow) {
           slow = idxMap.get(s.charAt(fast));
-          console.log(slow, '<- slow --- fast ->', fast);
           
       } else {
           // 没重复：更新 max
           max = Math.max(max, fast - slow);
-          console.log('max: -> ', max);
           
       }
 
       idxMap.set(s.charAt(fast), fast);
   }
-
-  console.log(idxMap);
-  
 
   return max;
 };
