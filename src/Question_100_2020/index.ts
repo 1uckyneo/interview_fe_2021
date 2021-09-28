@@ -4,12 +4,24 @@ import mySetInterVal from './1.mySetInterVal';
 import mergeSort from './2.mergeSort';
 import fib from './3.fib';
 import lengthOfLongestSubstring from './4.lengthOfLongestSubstring';
+import introChromeVersion from './5.intro_chrome_version';
+import reactDetailsOptimization from './6.react_details_optimization'
+import reactVersionFeat from './7.react_version_feat';
+import debounceThrottle from './9.debounceThrottle';
+import lodashGet from './14.lodashGet';
+import curryAdd from './15.curryAdd';
 
 export default {
   run: () => {
     // mySetInterVal.run(); // 1.写一个 mySetInterVal
     // mergeSort.run(); // 2.合并二维有序数组成一维有序数组，归并排序的思路
     // fib.run(); // 3.多种方式实现斐波那契数列
-    lengthOfLongestSubstring.run(); // 4.字符串出现的不重复最长长度
+    // lengthOfLongestSubstring.run(); // 4.字符串出现的不重复最长长度
+    // introChromeVersion.run(); // 5.介绍chrome 浏览器的几个版本
+    // reactDetailsOptimization.run(); // 6.React 项目中有哪些细节可以优化？实际开发中都做过哪些性能优化
+    // reactVersionFeat.run(); // 7.react 最新版本解决了什么问题 加了哪些东西
+    // debounceThrottle.run(); // 9.介绍防抖节流原理、区别以及应用，并用JavaScript进行实现
+    lodashGet.run() // 14.实现 lodash 的_.get
+    curryAdd.run();
   },
 };

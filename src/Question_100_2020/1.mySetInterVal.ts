@@ -1,6 +1,6 @@
-type AnyFn = (...args: unknown[]) => unknown;
+import type { UnknownFn } from '../utils/typing';
 
-class MySetInterval<Fn extends AnyFn = AnyFn> {
+class MySetInterval<Fn extends UnknownFn = UnknownFn> {
   private callback: Fn;
   private timeoutId?: ReturnType<typeof setTimeout>;
   private a: number;
