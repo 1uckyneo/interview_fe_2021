@@ -24,7 +24,7 @@ const p1 = new Promise(function (resolve) {
   }, 1000)
 });
 
-const p2 = new Promise(function (resolve) {
+const p2 = new Promise(function (resolve, reject) {
   setTimeout(function () {
     resolve(2)
   }, 2000)

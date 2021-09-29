@@ -11,6 +11,7 @@ import debounceThrottle from './9.debounceThrottle';
 import lodashGet from './14.lodashGet';
 import curryAdd from './15.curryAdd';
 import promiseAll from './24.promiseAll';
+import publishSubscribe from './28.publishSubscribe';
 
 export default {
   run: () => {
@@ -24,6 +25,7 @@ export default {
     // debounceThrottle.run(); // 9.介绍防抖节流原理、区别以及应用，并用JavaScript进行实现
     // lodashGet.run() // 14.实现 lodash 的_.get
     // curryAdd.run(); // 15.实现 add(1)(2)(3)
-    promiseAll.run(); // 24.实现 Promise.all
+    // promiseAll.run(); // 24.实现 Promise.all
+    publishSubscribe.run(); // 28.手写发布订阅
   },
 };
