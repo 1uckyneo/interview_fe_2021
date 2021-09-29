@@ -12,6 +12,7 @@ import lodashGet from './14.lodashGet';
 import curryAdd from './15.curryAdd';
 import promiseAll from './24.promiseAll';
 import publishSubscribe from './28.publishSubscribe';
+import listToTree from './29.listToTree';
 
 export default {
   run: () => {
@@ -26,6 +27,7 @@ export default {
     // lodashGet.run() // 14.实现 lodash 的_.get
     // curryAdd.run(); // 15.实现 add(1)(2)(3)
     // promiseAll.run(); // 24.实现 Promise.all
-    publishSubscribe.run(); // 28.手写发布订阅
+    // publishSubscribe.run(); // 28.手写发布订阅
+    listToTree.run(); // 29. 数组转树
   },
 };
