@@ -10,6 +10,7 @@ import reactVersionFeat from './7.react_version_feat';
 import debounceThrottle from './9.debounceThrottle';
 import lodashGet from './14.lodashGet';
 import curryAdd from './15.curryAdd';
+import promiseAll from './24.promiseAll';
 
 export default {
   run: () => {
@@ -21,7 +22,8 @@ export default {
     // reactDetailsOptimization.run(); // 6.React 项目中有哪些细节可以优化？实际开发中都做过哪些性能优化
     // reactVersionFeat.run(); // 7.react 最新版本解决了什么问题 加了哪些东西
     // debounceThrottle.run(); // 9.介绍防抖节流原理、区别以及应用，并用JavaScript进行实现
-    lodashGet.run() // 14.实现 lodash 的_.get
-    curryAdd.run();
+    // lodashGet.run() // 14.实现 lodash 的_.get
+    // curryAdd.run(); // 15.实现 add(1)(2)(3)
+    promiseAll.run(); // 24.实现 Promise.all
   },
 };

@@ -1,6 +1,6 @@
-import { UnknownFn } from '../utils/typing';
+import { AnyFn } from '../utils/typing';
 
-const curry = <Fn extends UnknownFn>(fn: Fn) => {
+const curry = <Fn extends AnyFn>(fn: Fn) => {
   type ArgType = Parameters<Fn>[0];
 
   const prevArgs: ArgType[] = [];
