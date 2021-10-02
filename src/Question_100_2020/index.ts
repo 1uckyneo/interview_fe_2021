@@ -13,6 +13,8 @@ import curryAdd from './15.curryAdd';
 import promiseAll from './24.promiseAll';
 import publishSubscribe from './28.publishSubscribe';
 import listToTree from './29.listToTree';
+import negativeIndexAccessibleArray from './30.negativeIndexAccessibleArray';
+import printDomTagStartWithHAndS from './73.printDomTagStartWithHAndS';
 
 export default {
   run: () => {
@@ -28,6 +30,8 @@ export default {
     // curryAdd.run(); // 15.实现 add(1)(2)(3)
     // promiseAll.run(); // 24.实现 Promise.all
     // publishSubscribe.run(); // 28.手写发布订阅
-    listToTree.run(); // 29. 数组转树
+    // listToTree.run(); // 29. 数组转树
+    // negativeIndexAccessibleArray.run(); // 30.使用ES6 的Proxy实现数组负索引。
+    printDomTagStartWithHAndS.run(); // 73.(浏览器环境)随便打开一个网页，用 JavaScript 打印所有以 s 和 h 开头的标签，并计算出标签的种类 
   },
 };
