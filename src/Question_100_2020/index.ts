@@ -15,6 +15,8 @@ import publishSubscribe from './28.publishSubscribe';
 import listToTree from './29.listToTree';
 import negativeIndexAccessibleArray from './30.negativeIndexAccessibleArray';
 import printDomTagStartWithHAndS from './73.printDomTagStartWithHAndS';
+import findBiggerRight from './74.findBiggerRight';
+import deepClone from './83.deepClone';
 
 export default {
   run: () => {
@@ -32,6 +34,8 @@ export default {
     // publishSubscribe.run(); // 28.手写发布订阅
     // listToTree.run(); // 29. 数组转树
     // negativeIndexAccessibleArray.run(); // 30.使用ES6 的Proxy实现数组负索引。
-    printDomTagStartWithHAndS.run(); // 73.(浏览器环境)随便打开一个网页，用 JavaScript 打印所有以 s 和 h 开头的标签，并计算出标签的种类 
+    // printDomTagStartWithHAndS.run(); // 73.(浏览器环境)随便打开一个网页，用 JavaScript 打印所有以 s 和 h 开头的标签，并计算出标签的种类 
+    // findBiggerRight.run(); // 74.给定一个数组，按找到每个元素右侧第一个比它大的数字，没有的话返回-1 规则返回一个数组
+    deepClone.run(); // 83.什么是深拷贝，和浅拷贝有什么区别，动手实现一个深拷贝
   },
 };
