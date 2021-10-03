@@ -1,23 +1,24 @@
 
 
-import mySetInterVal from './1.mySetInterVal';
-import mergeSort from './2.mergeSort';
-import fib from './3.fib';
-import lengthOfLongestSubstring from './4.lengthOfLongestSubstring';
-import introChromeVersion from './5.intro_chrome_version';
-import reactDetailsOptimization from './6.react_details_optimization'
-import reactVersionFeat from './7.react_version_feat';
-import debounceThrottle from './9.debounceThrottle';
-import lodashGet from './14.lodashGet';
-import curryAdd from './15.curryAdd';
-import promiseAll from './24.promiseAll';
-import publishSubscribe from './28.publishSubscribe';
-import listToTree from './29.listToTree';
-import negativeIndexAccessibleArray from './30.negativeIndexAccessibleArray';
-import printDomTagStartWithHAndS from './73.printDomTagStartWithHAndS';
-import findBiggerRight from './74.findBiggerRight';
-import deepClone from './83.deepClone';
-import linkedListBasedQueue from './96.linkedListBasedQueue';
+// import mySetInterVal from './1.mySetInterVal';
+// import mergeSort from './2.mergeSort';
+// import fib from './3.fib';
+// import lengthOfLongestSubstring from './4.lengthOfLongestSubstring';
+// import introChromeVersion from './5.intro_chrome_version';
+// import reactDetailsOptimization from './6.react_details_optimization'
+// import reactVersionFeat from './7.react_version_feat';
+// import debounceThrottle from './9.debounceThrottle';
+// import lodashGet from './14.lodashGet';
+// import curryAdd from './15.curryAdd';
+// import promiseAll from './24.promiseAll';
+// import publishSubscribe from './28.publishSubscribe';
+// import listToTree from './29.listToTree';
+// import negativeIndexAccessibleArray from './30.negativeIndexAccessibleArray';
+// import printDomTagStartWithHAndS from './73.printDomTagStartWithHAndS';
+// import findBiggerRight from './74.findBiggerRight';
+// import deepClone from './83.deepClone';
+// import flat from './89.flat';
+// import linkedListBasedQueue from './96.linkedListBasedQueue';
 
 export default {
   run: () => {
@@ -38,6 +39,7 @@ export default {
     // printDomTagStartWithHAndS.run(); // 73.(浏览器环境)随便打开一个网页，用 JavaScript 打印所有以 s 和 h 开头的标签，并计算出标签的种类 
     // findBiggerRight.run(); // 74.给定一个数组，按找到每个元素右侧第一个比它大的数字，没有的话返回-1 规则返回一个数组
     // deepClone.run(); // 83.什么是深拷贝，和浅拷贝有什么区别，动手实现一个深拷贝
-    linkedListBasedQueue.run(); // 96.单向链表实现队列
+    // flat.run() // 89.手写实现 Array.flat()
+    // linkedListBasedQueue.run(); // 96.单向链表实现队列
   },
 };
