@@ -18,6 +18,7 @@
 // import findBiggerRight from './74.findBiggerRight';
 // import deepClone from './83.deepClone';
 // import flat from './89.flat';
+// import isInteger from './95.isInteger';
 // import linkedListBasedQueue from './96.linkedListBasedQueue';
 
 export default {
@@ -40,6 +41,7 @@ export default {
     // findBiggerRight.run(); // 74.给定一个数组，按找到每个元素右侧第一个比它大的数字，没有的话返回-1 规则返回一个数组
     // deepClone.run(); // 83.什么是深拷贝，和浅拷贝有什么区别，动手实现一个深拷贝
     // flat.run() // 89.手写实现 Array.flat()
+    // isInteger.run() // 95.实现 isInteger
     // linkedListBasedQueue.run(); // 96.单向链表实现队列
   },
 };
