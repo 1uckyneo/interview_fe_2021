@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="root">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <script>
+      function reverseUl() {
+        const liNodes = document.getElementById('root').getElementsByTagName('li');
+
+        console.log(liNodes);
+
+        let start = 0;
+        let end = liNodes.length - 1;
+
+        while (start < end) {
+          const startContent = liNodes[start].innerHTML;
+          const endContent = liNodes[end].innerHTML;
+
+          liNodes[start].innerHTML = endContent;
+          liNodes[end].innerHTML = startContent;
+
+          start += 1;
+          end -= 1;
+        }
+      }
+
+      reverseUl();
+    </script>
+  </body>
+</html>
