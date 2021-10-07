@@ -25,7 +25,7 @@ function sortVersion(versions: string[]): string[] {
   const right: string[] = [];
 
   for(let i = 1; i < versions.length; i += 1) {
-    if(isLeftVersionGtRight(versions[i]!, pivot)) {
+    if(isLeftVersionGtRight(pivot, versions[i]!)) {
       left.push(versions[i]!);
     } else {
       right.push(versions[i]!);
