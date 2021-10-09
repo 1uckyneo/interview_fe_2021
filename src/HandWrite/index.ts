@@ -1,9 +1,13 @@
 // import compose from "./compose";
-import setTimeoutAndSetInterval from './setTimeoutAndSetInterval'
+import setTimeoutAndSetInterval from './setTimeoutAndSetInterval';
+import scheduler from './scheduler';
+import myNew from './new';
 
 export default {
   run: () => {
     // compose.run(); // 1 compose
     // setTimeoutAndSetInterval.run(); // 第二题 setTimeout 模拟实现 setInterval（setInterval 模拟实现 setTimeout）
+    // scheduler.run(); // 7 实现有并行限制的 Promise 调度器
+    myNew.run();
   },
 }
