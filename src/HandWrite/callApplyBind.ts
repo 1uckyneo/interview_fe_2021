@@ -28,11 +28,8 @@ Function.prototype.myApply = function(thisArg = window, args = []) {
 Function.prototype.myBind = function(thisArg, ...args) {
   thisArg = thisArg || window;
 
-  let fn = Symbol();
-  thisArg[fn] = this;
-
   return (...restArgs) => {
-    return thisArg[fn](...args, ...restArgs);
+    return this.call(thisArg,...args, ...restArgs);
   }
 }
 
@@ -55,5 +52,6 @@ export default {
     sayWord.myApply(bottle, ['myApply', 'do I look like apply method?']);
     const bindSayWord = sayWord.myBind(bottle, 'myBind');
     bindSayWord('do I look like bind method?');
+    bindSayWord('can I do this again?');    
   }
 }
