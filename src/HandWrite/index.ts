@@ -6,6 +6,7 @@ import callApplyBind from './callApplyBind';
 import myInstanceOf from './instanceOf';
 import aop from './aop';
 import lazyMan from './lazyMan';
+import LRU from './LRUcache';
 
 export default {
   run: () => {
@@ -16,6 +17,7 @@ export default {
     // callApplyBind.run(); // 手写 call apply bind
     // myInstanceOf.run();
     // aop.run();
-    lazyMan.run();
+    // lazyMan.run(); 
+    LRU.run();
   },
 }
