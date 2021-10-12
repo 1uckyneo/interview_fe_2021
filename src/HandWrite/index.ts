@@ -4,6 +4,7 @@ import scheduler from './scheduler';
 import myNew from './new';
 import callApplyBind from './callApplyBind';
 import myInstanceOf from './instanceOf';
+import aop from './aop';
 
 export default {
   run: () => {
@@ -12,6 +13,7 @@ export default {
     // scheduler.run(); // 7 实现有并行限制的 Promise 调度器
     // myNew.run();
     // callApplyBind.run(); // 手写 call apply bind
-    myInstanceOf.run();
+    // myInstanceOf.run();
+    aop.run();
   },
 }
