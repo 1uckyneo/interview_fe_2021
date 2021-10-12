@@ -7,6 +7,7 @@ import myInstanceOf from './instanceOf';
 import aop from './aop';
 import lazyMan from './lazyMan';
 import LRU from './LRUcache';
+import myObjectIs from './myObjectIs';
 
 export default {
   run: () => {
@@ -18,6 +19,7 @@ export default {
     // myInstanceOf.run();
     // aop.run();
     // lazyMan.run(); 
-    LRU.run();
+    // LRU.run();
+    myObjectIs.run();
   },
 }
