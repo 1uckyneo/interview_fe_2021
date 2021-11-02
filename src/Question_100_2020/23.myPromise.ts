@@ -1,46 +1,95 @@
 class MyPromise<T> {
-  state: 'pending' | 'fulfilled' | 'rejected' = 'pending';
-  reason?: unknown;
-  value?: T;
+  private status: 'pending' | 'fulfilled' | 'rejected';
+  private value: T | null;
+  private resolveCallbacks: ((value: T) => void)[];
+  private rejectCallbacks: ((reason: any) => void)[];
 
+  constructor(
+    executor: (
+      resolve: (value: T) => void,
+      reject: (reason?: any) => void
+    ) => void
+  ) {
+    this.status = 'pending';
+    this.value = null;
+    this.resolveCallbacks = [];
+    this.rejectCallbacks = [];
 
-  constructor(executor: (resolve: (value: T) => void, reject: (reason?: unknown) => void) => void) {
-    let resolve = (value: T) => {
-      if (this.state === 'pending') {
-        this.state = 'fulfilled';
-        this.value = value;
-      }
+    const resolve = (value: T) => {
+      setTimeout(() => {
+        if (this.status === 'pending') {
+          this.status = 'fulfilled';
+          this.value = value;
+
+          this.resolveCallbacks.forEach((callback) => {
+            callback(this.value as T);
+          });
+        }
+      });
     };
-    let reject = (reason: unknown) => {
-      if (this.state === 'pending') {
-        this.state = 'rejected';
-        this.reason = reason;
-      }
+
+    const reject = (reason: any) => {
+      setTimeout(() => {
+        if (this.status === 'pending') {
+          this.status = 'rejected';
+          this.value = reason;
+
+          this.rejectCallbacks.forEach((callback) => {
+            callback(this.value);
+          });
+        }
+      });
     };
+
     try {
-      // 立即执行函数
       executor(resolve, reject);
-    } catch (err) {
-      reject(err);
+    } catch (error) {
+      reject(error);
     }
   }
-  then(onFulfilled: (value: T) => MyPromise<T>, onRejected: (reason?: unknown) => MyPromise<T>) {
-    return new MyPromise((resolve, reject) => {
-      if (this.state === 'fulfilled') {
-        let x = onFulfilled(this.value as T);
-        resolve(x);
-      };
 
-      if (this.state === 'rejected') {
-        let x = onRejected(this.reason);
-        reject(x);
-      };
-    }) 
+  then(onfulfilled?: (value: T) => void, onrejected?: (reason: any) => void) {
+    return new MyPromise((resolve) => {
+      setTimeout(() => {
+        const onFulfilled =
+          typeof onfulfilled === 'function' ? onfulfilled : () => {};
+        const onRejected =
+          typeof onrejected === 'function' ? onrejected : () => {};
+
+        this.resolveCallbacks.push(onFulfilled);
+        this.rejectCallbacks.push(onRejected);
+        resolve(undefined);
+      });
+    });
   }
 }
 
 export default {
   run: () => {
-    console.log('暂未正确实现');
+    console.log('第一步');
+    const promise = new MyPromise<string>((resolve, reject) => {
+      console.log('第二步');
+
+      // throw new Error('我裂开了');
+
+      setTimeout(() => {
+        resolve('这次一定');
+        reject('下次一定');
+
+        console.log('第四步');
+      });
+    });
+
+    promise
+      .then(
+        (value) => console.log(value),
+        (reason) => console.log(reason?.message ?? reason)
+      )
+      .then(
+        (value) => console.log(value),
+        (reason) => console.log(reason?.message ?? reason)
+      );
+
+    console.log('第三步');
   },
-}
+};

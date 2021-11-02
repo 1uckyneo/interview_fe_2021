@@ -48,8 +48,8 @@ export default {
     };
     
     // 使用 call 将 bottle 传递为 sayWord 的 this
-    sayWord.myCall(bottle, 'myCall', 'do I look like call method?'); 
-    sayWord.myApply(bottle, ['myApply', 'do I look like apply method?']);
+    // sayWord.myCall(bottle, 'myCall', 'do I look like call method?'); 
+    // sayWord.myApply(bottle, ['myApply', 'do I look like apply method?']);
     const bindSayWord = sayWord.myBind(bottle, 'myBind');
     bindSayWord('do I look like bind method?');
     bindSayWord('can I do this again?');    

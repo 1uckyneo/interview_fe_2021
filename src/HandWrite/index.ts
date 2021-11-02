@@ -6,8 +6,9 @@ import callApplyBind from './callApplyBind';
 import myInstanceOf from './instanceOf';
 import aop from './aop';
 import lazyMan from './lazyMan';
-import LRU from './LRUcache';
+import LRU from './LRUCache';
 import myObjectIs from './myObjectIs';
+import arrayObservable from './arrayObservable';
 
 export default {
   run: () => {
@@ -20,6 +21,7 @@ export default {
     // aop.run();
     // lazyMan.run(); 
     // LRU.run();
-    myObjectIs.run();
+    // myObjectIs.run();
+    arrayObservable.run();
   },
 }
