@@ -9,6 +9,8 @@ import lazyMan from './lazyMan';
 import LRU from './LRUCache';
 import myObjectIs from './myObjectIs';
 import arrayObservable from './arrayObservable';
+import promise from './promise';
+
 
 export default {
   run: () => {
@@ -22,6 +24,7 @@ export default {
     // lazyMan.run(); 
     // LRU.run();
     // myObjectIs.run();
-    arrayObservable.run();
+    // arrayObservable.run();
+    promise.run();
   },
 }
